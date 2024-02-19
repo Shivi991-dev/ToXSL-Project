@@ -28,4 +28,6 @@
     </div>
     
 </div>
-<?php } ?>
+<?php }else{?>
+<h3>Error Page not Accessible (Login as a manager to continue)</h3>
+<?php}?>

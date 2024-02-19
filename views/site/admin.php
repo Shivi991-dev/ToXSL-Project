@@ -18,7 +18,7 @@
                 foreach($user as $u){ ?>
                 <tr>
                 <th scope="row"><?= $count++?>.</th>
-                <td><?= $u->username ?></td>
+                <td><?= $u->username ?><?php if($u->id == Yii::$app->user->id){ echo '(You)';} ?></td>
                 <td><?= $u->email ?></td>
                 <td><?= $u->user_role ?></td>
                 </tr>
@@ -28,4 +28,6 @@
     </div>
     
 </div>
-<?php } ?>
+<?php }else{?>
+<h3>Error Page not Accessible (Login as Admin to continue)</h3>
+<?php }?>
